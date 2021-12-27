@@ -1,0 +1,54 @@
+
+
+  
+    <div class="basket">
+    
+   
+      <div *ngFor="let tempCartItem of carteItems" class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="{{tempCartItem.imageUrl}}" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1><strong><span class="item-quantity">{{tempCartItem.quantity}}</span> x {{tempCartItem.name}}</strong> Lace Sleeve Cuff Dress</h1>
+            <p><strong>Navy, Size 18</strong></p>
+            <p>Total Price : <span></span></p>
+          </div>
+        </div>
+      
+        <div class="utiles">
+          <div class="price"> Price : 26.00</div>
+          <div class="quantity">
+            <input type="number" value="{{tempCartItem.quantity}}" min="1" class="quantity-field">
+            <button><span class="qty-up">+</span></button>
+            <button><span class="qty-down">-</span></button>
+          </div>
+         
+          <div class="remove">
+            <button><i class="far fa-trash-alt"></i>Remove</button>
+            <button><i class="fas fa-info-circle"></i>Back To Details</button>
+          </div>
+        </div>
+        </div>
+    </div>
+    <aside>
+      <div class="summary">
+        <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+    
+        <div *ngFor="let tempCartItem of carteItems" class="summary-delivery">
+          <div class="details-cart">
+            <div class="name-product">{{tempCartItem.quantity}} x {{tempCartItem.name}}</div>
+            <div class="price"> Price : {{tempCartItem.subTotalPrice}}</div>
+          </div>
+        </div>
+        <div class="summary-total">
+          <div class="total-title">Total</div>
+          <div class="total-value final-value" id="basket-total">{{totalPrice}}</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">Go to Secure Checkout</button>
+        </div>
+      </div>
+    </aside>
+  
+

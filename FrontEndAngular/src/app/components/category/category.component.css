@@ -1,0 +1,24 @@
+.checkbox-filter li {
+    list-style-type: none;
+    margin-top: 10px;
+    font-size: medium;
+}
+.product .product-name{
+    font-size: 10px;
+}
+.footer-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ngb-pagination ::ng-deep a {
+    color: black !important;
+  }
+  
+  ngb-pagination ::ng-deep .page-item.active .page-link {
+    border: 1px solid #D10024;
+    background-color: #D10024;
+    color: white !important;
+  }
+  

@@ -1,0 +1,52 @@
+.checkbox-filter li {
+  list-style-type: none;
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+button[aria-expanded="true"]>.fas {
+  transform: rotate(90deg);
+}
+button:focus[aria-expanded="true"] {
+  border: 2px solid transparent !important;
+  
+}
+.mb-1{
+  border: 2px solid transparent !important;
+}
+button>.fas {
+  width: 1.25 em;
+  line-height: 0;
+  transition: transform .35s ease;
+  transform-origin: 0.5 em 50%;
+  color: rgb(177, 177, 177);
+}
+.title .fs-5{
+  font-weight: 700;
+  font-size: 26px;
+}
+button{
+  color: black;
+  font-weight: 500;
+  background-color: white;
+}
+
+.collapse ul li{
+  margin-left: 40px;
+  padding: 0px 10px 3px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

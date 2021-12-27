@@ -1,0 +1,20 @@
+<!--
+<div class="cart-area d-n">
+    <a href="shopping-detail.html">
+        <div class="total">{{ totalPrice | currency: 'USD' }}
+            <span>{{ totalQuantity }}</span> 
+        </div> 
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </a>
+</div> -->
+
+ 
+    <div class="dropdown">
+        <a class="dropdown-toggle" routerLink="/checkout" routerLinkActive="router-link-active">
+            
+          <i class="fa fa-shopping-cart"></i>
+          <span>Your Cart</span>
+          <div class="qty">{{totalQuantity}}</div>
+        </a>
+      </div>
+ 

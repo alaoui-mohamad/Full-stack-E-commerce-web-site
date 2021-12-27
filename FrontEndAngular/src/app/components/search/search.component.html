@@ -1,0 +1,27 @@
+
+    <!--
+    <select class="custom-select" id="inputGroupSelect04" [(ngModel)]="selectedValue">
+      <option selected>Choose...</option>
+      <option *ngFor="let item of productCategory" [value]="item.categoryName">
+        {{item.categoryName}}
+    </option>
+      
+    </select>
+    <div class="input-group-append">
+      <button (click)="doSearch(selectedValue)" class="btn btn-outline-secondary" >Button</button>
+    </div>
+  -->
+
+
+  <div class="header-search">
+    <form>
+      
+        <input class="input" placeholder="Search here"
+        #myInput type="text" 
+             placeholder="Search for products ..."
+            
+             (keyup.enter)="doSearch(myInput.value)" 
+        >
+        <button (click)="doSearch(myInput.value)" class="search-btn">Search</button>
+    </form>
+</div>

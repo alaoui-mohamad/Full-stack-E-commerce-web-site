@@ -1,0 +1,155 @@
+<!-- 
+<div class="detail-section">
+    <div class="container-fluid">
+
+        <img src="{{ product.imageUrl }}" class="detail-img">
+
+        <h3>{{ product.name }}</h3>
+        <div class="price">{{ product.unitPrice | currency:'USD' }}</div>
+        <a href="#" class="primary-btn">Add to cart</a>
+
+        <hr>
+        <h4>Description</h4>
+        <p>{{ product.description }}</p>
+
+        <a routerLink="/products" class="mt-5">Back to Product List</a>
+    </div>
+</div>
+-->
+	
+
+
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- Product main img -->
+                <div class="col-md-5 col-md-push-2">
+                    <div id="product-main-img">
+                        <div class="product-preview">
+                            <img src="{{ product.imageUrl }}"  id="imagebox" alt="">
+                        </div>
+
+                
+                    </div>
+                </div>
+                <!-- /Product main img -->
+
+                <!-- Product thumb imgs -->
+             			<!-- Product thumb imgs -->
+					<div class="col-md-2  col-md-pull-5">
+						<div  id="product-imgs">
+							<div *ngxRange="let value from 1 to product.detailNumber+1 by 1" class="product-preview">
+								<img  src="assets/images/details/{{product.id}}/{{value}}.png"   onclick="clickme(this)">
+							</div>
+						</div>
+					</div>
+					<!-- /Product thumb imgs -->
+                <!-- /Product thumb imgs -->
+
+                <!-- Product details -->
+                <div class="col-md-5">
+                    <div class="product-details">
+                        <h3>{{ product.name }}</h3>
+                        <!--
+                        <div>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <a class="review-link" href="#">10 Review(s) | Add your review</a>
+                        </div>
+                        -->
+                        <div>
+                            <h3 class="product-price">{{ product.unitPrice | currency:'DH' }} <del class="product-old-price">{{ product.unitPrice | currency:'DH' }}</del></h3>
+                            <span class="product-available">In Stock</span>
+                        </div>
+                        <p>{{ product.description }}</p>
+                        <div class="product-options">
+                            <label>
+                                Size
+                                <select class="input-select">
+                                    <option value="0">X</option>
+                                </select>
+                            </label>
+                            <label>
+                                Color
+                                <select class="input-select">
+                                    <option value="0">Red</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="add-to-cart">
+                            <div class="qty-label">
+                                Qty
+                                <div class="input-number">
+                                    <input type="number">
+                                    <span class="qty-up">+</span>
+                                    <span class="qty-down">-</span>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                        </div>
+
+                        <ul class="product-btns">
+                            <li><a href="#"><i class="fa fa-heart-o"></i> add to wishlist</a></li>
+                            
+                        </ul>
+
+                        <ul class="product-links">
+                            <li>Category:</li>
+                            <li><a href="#">Headphones</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                        <!-- share option
+                        <ul class="product-links">
+                            <li>Share:</li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+                <!-- /Product details -->
+
+                <!-- Product tab -->
+                <div class="col-md-12">
+                    <div id="product-tab">
+                        <!-- product tab nav -->
+                        <ul class="tab-nav">
+                            <li class="active">Description</li>
+                            
+                        </ul>
+                        <!-- /product tab nav -->
+
+                        <!-- product tab content -->
+                        <div class="tab-content">
+                            <!-- tab1  -->
+                            <div id="tab1" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>{{ product.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /tab1  -->
+                        </div>
+                        <!-- /product tab content  -->
+                    </div>
+                </div>
+                <!-- /product tab -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->

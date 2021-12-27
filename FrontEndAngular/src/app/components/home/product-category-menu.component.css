@@ -1,0 +1,177 @@
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 20%;
+  width: 60%;
+  height: 400px;
+
+}
+.info-container .button_add {
+
+  margin-left: 0px;
+ 
+}
+.slid-image img{
+
+  position: relative;
+  width: 40%;
+  height: 400px;
+ 
+  float: right;
+}
+.slick-slider{
+  height: 400px;
+  width: 88%;
+  margin: auto;
+  background: #e4e7ed;
+}
+
+body .slick-prev, 
+body .slick-next {
+  height: 45px;
+  width: 40px;
+  background: grey !important;
+  z-index: 100;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  
+  background-size: cover;
+}
+
+
+#carsousel1{
+  width: 100% !important;
+  height: 700px !important;
+  box-sizing: border-box !important;
+}
+
+.carousel_cell{
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+carousel{
+  z-index: 0;
+
+}
+
+
+.container-tabs {
+  position: relative;
+  margin: 10px;
+  width: 350px;
+  height: 530px;
+  background: white;
+  border-radius: 3px;
+  position: relative;
+  border: 2px solid #e4e7ed; 
+  transition: 0.2s ease-out;
+}
+.container-tabs:hover{
+  border: 1px solid red;
+}
+.image{
+  position: relative;
+  height: 345px;
+  width: 345px;
+}
+
+.information {
+  position: relative;
+  text-align: center;
+}
+.information h3 {
+  margin-bottom: 10px;
+}
+.information h3 .product_name{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.information .price{
+  
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #D10024;
+  
+}
+.information .price .old_price{
+
+color: #8c98a8;
+font-size: 70%;
+font-weight: 400;
+}
+.button_add{
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-top: 1px solid #e4e7ed;
+  padding:10px 0px 0px 0px ;
+}
+.store {
+  font-size: 16px;
+  color: #8c98a8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@media  (min-width: 1201px) {
+
+  .carousel_cell{
+   padding-left: 5px !important;
+  }
+}
+
+@media  (min-width: 991px) {
+.container-tabs{
+  width: 350px;
+}
+}
+
+@media only screen and (min-width: 768px) {
+  .info-container {
+    width: 50%;
+  }
+  .slid-image img{
+    width: 50%;
+  }
+  .container-tabs
+  {
+    
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .slid-image {
+    height: 220px;
+    width: 100%;
+    
+  }
+  .slid-image img {
+    position: relative;
+    left: 25%;
+    height: 100%;
+    float: none;
+  }
+  .info-container{
+    height: 50%;
+    align-items: center;
+  }
+  .button_add{
+    margin-right: 0px;
+  }
+.container{
+  
+  padding-right: 5px !important ;
+}
+.container-tabs
+{
+  margin: 0;
+}
+}

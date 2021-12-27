@@ -1,0 +1,42 @@
+<!-- <div id="aside" class="col-md-3">
+        
+    <div class="aside">
+      <h3 class="aside-title">Categories</h3>
+      <div class="checkbox-filter">
+
+        <li *ngFor="let tempProductCategory of productCategories">
+          <a routerLink="/category/{{tempProductCategory.id}}" routerLinkActive="active-link">
+            {{ tempProductCategory.categoryName }}
+        </a>
+        </li>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="aside" class="col-md-3">
+   <div class="container">
+     <div class="row">
+       <div class="title">
+        <span class="fs-5 fw-semibold">Collapsible</span>
+       </div>
+  <div *ngFor="let tempProductCategory of productCategories;let ic = index;" class="">      
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn" data-bs-toggle="collapse" [attr.data-bs-target]="'#test' + tempProductCategory.id" aria-expanded="false"
+        >
+        <i class="fas fa-chevron-right"></i> {{tempProductCategory.categoryName}}
+        </button>
+        <div class="collapse" [ngClass]="{'show' : ic==0}" [id]="'test'+ tempProductCategory.id">
+          <ul *ngFor="let subCategory of productSubCategory;let i = index" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li *ngIf="(subCategory.id-(tempProductCategory.id*10)==i+1)"><a routerLink="/subCategory/{{subCategory.id}}" routerLinkActive="active-link" class="link-dark rounded">{{subCategory.subCategoryName}}</a></li>
+          </ul>
+        </div>
+      </li> 
+      
+    </ul>
+      </div>
+     </div>
+   </div>
+      
+
+  </div>
